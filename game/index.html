@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mochi's Spot the Difference</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🐱 Mochi's <span>Spot the Difference</span></div>
+  <div class="hud">
+    <span id="hud-level" class="pill">Level 1 · Sunny Garden</span>
+    <span id="hud-found" class="pill">0 / 5 found · 5 left</span>
+    <span id="hud-time" class="pill time">1:30</span>
+    <span id="hud-score" class="pill">Score 0</span>
+    <button id="hud-hints" class="pill btn">Hint (3)</button>
+    <button id="hud-mute" class="pill btn">🔊 Sound</button>
+    <button id="hud-restart" class="pill btn">↻ Restart</button>
+  </div>
+</header>
+
+<main class="panels">
+  <figure class="panel">
+    <figcaption>Picture A</figcaption>
+    <canvas id="panel-left"></canvas>
+  </figure>
+  <div class="vs">VS</div>
+  <figure class="panel">
+    <figcaption>Picture B</figcaption>
+    <canvas id="panel-right"></canvas>
+  </figure>
+</main>
+
+<footer class="help">
+  Click a difference on either picture to mark it · Wrong click costs 3 seconds ·
+  <b>H</b> hint · <b>R</b> restart · <b>M</b> sound · Find all 5, then 7, then 10 — three scenes, 22 secrets.
+</footer>
+
+<div id="overlay" class="overlay hidden"></div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
